@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    container_name: rewardsapp
+    ports:
+      - "8005:8005"
+    volumes:
+      - "$PWD:/code"
+    networks:
+      - net
+
+networks:
+  net:
